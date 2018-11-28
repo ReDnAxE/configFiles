@@ -1,1 +1,4 @@
 .vim/bundle
+.vim/temp_dirs
+.vim/.netrwhist
+!.vim/temp_dirs/.gitkeep
