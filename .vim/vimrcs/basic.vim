@@ -53,9 +53,10 @@ nnoremap " `
 
 nmap <leader>' `.
 
-nnoremap <leader>> :vertical resize +5<cr>
-nnoremap <leader>< :vertical resize -5<cr>
-
+nnoremap <leader>> :vertical resize +10<cr>
+nnoremap <leader>< :vertical resize -10<cr>
+" nnoremap <leader>+ :resize +10<cr> marche pas ?
+" nnoremap <leader>- :resize -10<cr> marche pas ?
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -63,7 +64,7 @@ nnoremap <leader>< :vertical resize -5<cr>
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
-" Turn on the WiLd menu
+" Turn on the WiLd menu (to propose completion with <Tab>)
 set wildmenu
 
 " Ignore compiled files
@@ -80,8 +81,8 @@ set ruler
 " Height of the command bar
 set cmdheight=2
 
-" A buffer becomes hidden when it is abandoned
-set hid
+" A buffer becomes hidden when it is abandoned. It hides buffers instead of closing them
+set hidden
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -90,7 +91,7 @@ set whichwrap+=<,>,h,l
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases
+"  ignore case if search pattern is all lowercase, case-sensitive otherwise
 set smartcase
 
 " Highlight search results
@@ -120,7 +121,7 @@ set tm=500
 set foldcolumn=1
 
 " Show line numbers
-set nu
+set number
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -129,13 +130,9 @@ set nu
 syntax enable
 
 " use gruvbox plugin theme
-colorscheme gruvbox
-
-try
-    "set t_Co=256
-    colorscheme solarized
-catch
-endtry
+if &t_Co >= 256 || has("gui_running")
+  colorscheme gruvbox
+endif
 
 set background=dark
 
@@ -146,8 +143,8 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 "Red line @80 chars
-set cc=80
-hi ColorColumn ctermbg=153 ctermfg=black
+" set cc=80
+" hi ColorColumn ctermbg=153 ctermfg=black
 
 "Creates a group ExtraWhitespace
 hi ExtraWhitespace ctermbg=red guibg=red

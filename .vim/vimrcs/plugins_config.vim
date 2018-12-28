@@ -56,6 +56,12 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
+""""""""""""""""""""""""""""""
+" => zivyangll/git-blame
+""""""""""""""""""""""""""""""
+nnoremap <leader>s :<C-u>call gitblame#echo()<CR>
+
+
 """"""""""""""""""""""""""""""""""""""""""""
 " => Pymod
 """""""""""""""""""""""""""""""""""""""""""
