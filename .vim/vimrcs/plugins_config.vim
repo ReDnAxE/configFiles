@@ -37,6 +37,10 @@ let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
 
+""""""""""""""""""""""""""""""
+" => Fzf
+""""""""""""""""""""""""""""""
+set rtp+=~/.fzf
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
