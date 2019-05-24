@@ -22,11 +22,12 @@ Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 Plugin 'plasticboy/vim-markdown'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-sleuth'
 Plugin 'zivyangll/git-blame.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

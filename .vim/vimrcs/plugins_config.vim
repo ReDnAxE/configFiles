@@ -54,10 +54,10 @@ let NERDTreeIgnore=['\.o$']
 """"""""""""""""""""""""""""""
 " => YouCompleteMe
 """"""""""""""""""""""""""""""
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_default_global_conf.py'
-let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_default_global_conf.py'
+" let g:ycm_autoclose_preview_window_after_insertion = 1
 "let g:ycm_enable_diagnostic_signs = 0
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
 """"""""""""""""""""""""""""""
